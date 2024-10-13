@@ -33,12 +33,10 @@ int file_copy(const char *src_file, const char *dest_file) {
         }
     }
 
-    // Error handling for read
     if (bytes_read < 0) {
         perror("Error reading from source file");
     }
 
-    // Close file descriptors
     close(src_fd);
     close(dest_fd);
 
